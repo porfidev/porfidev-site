@@ -1,20 +1,31 @@
 {
   "name": "porfidev-blog",
   "version": "0.1.0",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deply": "firebase deploy --only functions,hosting",
+    "out": "next build && next export"
   },
   "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.20.0",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
   "devDependencies": {
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4"
+    "eslint": "^8.12.0",
+    "eslint-config-next": "12.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "jsonwebtoken": "^8.5.1",
+    "prettier": "^2.6.2"
   }
 }

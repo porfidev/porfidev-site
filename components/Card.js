@@ -3,7 +3,7 @@ import px2vw from '../utils/px2vw.js';
 
 const Card = styled.div`
   display: flex;
-  width: ${px2vw(140, 320)};
+  position: relative;
   flex-direction: row;
   justify-content: center;
   margin: ${px2vw(32)};
@@ -11,7 +11,6 @@ const Card = styled.div`
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   min-height: ${px2vw(140)};
-  max-width: ${px2vw(320)};
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;

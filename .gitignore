@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 .firebase/
+firebase-debug.log
 
 # debug
 npm-debug.log*

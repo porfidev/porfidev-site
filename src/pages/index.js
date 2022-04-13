@@ -1,11 +1,7 @@
 import Script from 'next/script.js';
 import Link from 'next/link.js';
-import Card from '../components/Card.js';
 import styled from 'styled-components';
-import CardTitle from '../components/CardTitle.js';
 import px2vw from '../utils/px2vw.js';
-import Image from 'next/image.js';
-import SeranImage from '../assets/senran.jpeg';
 
 export const Container = styled.div`
   display: flex;

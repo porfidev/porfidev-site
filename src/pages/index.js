@@ -1,3 +1,4 @@
+import Script from 'next/script.js';
 import Card from '../components/Card.js';
 import styled from 'styled-components';
 import CardTitle from '../components/CardTitle.js';
@@ -53,6 +54,14 @@ export default function Home() {
           <h1>Hola mundo! 3</h1>
         </Card>
       </Container>
+      <Script strategy="lazyOnload">
+        {`
+          var sc_project=12742706;
+          var sc_invisible=1;
+          var sc_security="52fa0aba";
+          `}
+      </Script>
+      <Script src="https://www.statcounter.com/counter/counter.js" strategy="lazyOnload"></Script>
     </>
   );
 }

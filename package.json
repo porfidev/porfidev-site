@@ -4,14 +4,13 @@
   "main": "server.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export",
-    "deploy:all": "firebase deploy --only functions,hosting",
-    "deploy:hosting": "firebase deploy --only hosting",
-    "out": "next build && next export"
+    "dev": "next src/",
+    "build": "next build src/",
+    "start": "next start src/",
+    "serve": "npm run build && firebase emulators:start --only functions,hosting",
+    "shell": "npm run build && firebase functions:shell",
+    "deploy": "firebase deploy --only functions,hosting",
+    "logs": "firebase functions:log"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
@@ -20,7 +19,8 @@
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-icons": "^10.45.0"
   },
   "devDependencies": {
     "eslint": "^8.12.0",
@@ -28,6 +28,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "firebase-functions-test": "^0.3.3",
+    "firebase-tools": "^10.6.0",
     "jsonwebtoken": "^8.5.1",
     "prettier": "^2.6.2"
   }
